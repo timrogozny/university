@@ -20,7 +20,7 @@ def first():
 
 def word_score(word):
     score = 0
-    letter_scores = {
+    a = {
         "АВЕИНОРСТ": 1,
         "ДКЛМПУ": 2,
         "БГЁЬЯ": 3,
@@ -31,14 +31,14 @@ def word_score(word):
     }
 
     for letter in word.upper():
-        for key in letter_scores:
-            if letter in key:
-                score += letter_scores[key]
+        for let in a:
+            if letter in let:
+                score += a[let]
 
     return score
 
 
-word = input("Введите слово: ")
-print(f"Стоймость слова '{word}' равна {word_score(word)} очков.")
+word = input("Enter word: ")
+print("Word value", word, "is", word_score(word) )
 
 
