@@ -1,0 +1,12 @@
+def z3():
+    with open("f", encoding='utf-8') as file:
+        fl_rd = csv.reader(file, delimiter=",")
+        print("нужно купить:")
+        c = 0
+        s = 0
+        for row in fl_rd:
+            if c != 0:
+                print(f'{row[0]} - {row[1]} шт. за {row[2]} руб.')
+                s += int(row[2]) * int(row[1])
+            c += 1
+        print("итого:", s, "руб.")

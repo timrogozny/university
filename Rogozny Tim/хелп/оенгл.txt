@@ -1,0 +1,14 @@
+def t3():
+    import csv
+    result = 0
+    print('Нужно купить:')
+    with open('01data.csv') as file:
+        file = csv.reader(file)
+        for i in file:
+            name = i[0]
+            count = int(i[1])
+            price = int(i[2])
+            result += count * price
+            print(f'{name} - {count} шт. за {price} руб.')
+    print(f'Итоговая сумма: {result} руб.')
+t3()
