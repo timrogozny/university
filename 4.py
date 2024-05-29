@@ -33,7 +33,7 @@ third()
 
 def fourth():
     ticket = input("Enter ticket number:")
-    if len(ticket) % 2 == 0:
+    if len(ticket) % 2 == 1:
         print("Enter an odd ticket number!")
     half = len(ticket) // 2
     half1 = ticket[:half]
