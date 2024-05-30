@@ -58,13 +58,20 @@ background-color: rgb(107, 146, 132);</string>
       <bold>true</bold>
      </font>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
+     <string notr="true">color:rgb(255, 66, 91);
+
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(159, 156, 194, 255), stop:1 rgba(255, 247, 195, 255));
 </string>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>122</string>
+    </property>
+    <property name="margin">
+     <number>180</number>
     </property>
    </widget>
    <widget class="QPushButton" name="all_pushButton_2">
