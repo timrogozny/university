@@ -2,9 +2,21 @@ import requests
 
 
 
+def second():
+    url = 'https://randomhistoricalfact.000webhostapp.com/fact'
+    response = requests.get(url)
+    data = response.json()
+    return data['fact']
+
+print("Random historical fact:")
+print(second())
+
+
 def get_weather(city):
+
     api = 'd66778fc8f5942023f05a2464f428e51'
     url = 'http://api.openweathermap.org/data/2.5/weather'
+
     params = {
         'q': city,
         'appid': api,
@@ -28,14 +40,4 @@ if weather:
     print(f"Wind Speed: {weather['wind_speed']} m/s")
 else:
     print("Error")
-
-
-def second():
-    url = 'https://randomhistoricalfact.000webhostapp.com/fact'
-    response = requests.get(url)
-    data = response.json()
-    return data['fact']
-
-print("Random historical fact:")
-print(second())
 
